@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { log } from "../../log";
+import { useState } from 'react';
 
-export default function ConfigureCounter({onSet}) {
+import { log } from '../../log.js';
+
+export default function ConfigureCounter({ onSet }) {
   log('<ConfigureCounter />', 1);
 
-  const [enteredNumber, setEnteredNumber] = useState(0); 
+  const [enteredNumber, setEnteredNumber] = useState(0);
 
   function handleChange(event) {
     setEnteredNumber(+event.target.value);
@@ -16,12 +17,10 @@ export default function ConfigureCounter({onSet}) {
   }
 
   return (
-    <>
-      <section id="configure-counter">
-        <h2>Set Counter</h2>
-        <input type="number" onChange={handleChange} value={enteredNumber} />
-        <button onClick={handleSetClick}>Set</button>
-      </section>
-    </>
+    <section id="configure-counter">
+      <h2>Set Counter</h2>
+      <input type="number" onChange={handleChange} value={enteredNumber} />
+      <button onClick={handleSetClick}>Set</button>
+    </section>
   );
 }

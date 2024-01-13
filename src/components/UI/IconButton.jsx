@@ -1,4 +1,5 @@
 import { memo } from 'react';
+
 import { log } from '../../log.js';
 
 const IconButton = memo(function IconButton({ children, icon, ...props }) {
